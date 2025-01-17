@@ -1,7 +1,11 @@
 
 Things done: 
+
+- implementation:
 - generalization of call sorting function 
-- using different thread for the algorithm running
+- using a different thread for the algorithm running
+- using vertex and vertexBuffer to reduce CPU usage
+- invert the window view to have the origin in let left bottom corner
 
 Things to do:
   Computationally:
