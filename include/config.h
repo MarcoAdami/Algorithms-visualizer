@@ -16,7 +16,7 @@ float heightWindow = heightSort+heightSpecs;
 float height_rect=0;
 //100000
 //radix sort goes in bus error over 100000
-float nElements = 10000;
+float nElements = 10;
 
 float sizeX=widthSort/nElements;
 float sizeY=heightSort/nElements;
