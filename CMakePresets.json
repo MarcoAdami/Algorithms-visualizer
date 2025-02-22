@@ -1,14 +1,21 @@
 {
-    "version": 3,
-    "configurePresets": [
-        {
-            "name": "default",
-            "description": "default settings",
-            "generator": "Unix Makefiles",
-            "binaryDir": "${workspaceFolder}/build",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        }
-    ]
+  "version": 3,
+  "configurePresets": [
+      {
+          "name": "default",
+          "description": "Default settings for building the project",
+          "generator": "Ninja",
+          "binaryDir": "${sourceDir}/build",
+          "cacheVariables": {
+              "CMAKE_BUILD_TYPE": "Debug",
+              "CMAKE_CXX_COMPILER": "/Library/Developer/CommandLineTools/usr/bin/clang++"
+          }
+      }
+  ],
+  "buildPresets": [
+      {
+          "name": "default",
+          "configurePreset": "default"
+      }
+  ]
 }

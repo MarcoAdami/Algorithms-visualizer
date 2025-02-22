@@ -33,13 +33,10 @@ void Algorithms::chooseAlgorithm() {
       startMergeSort();
       break;
     case 3:
-
       shakerSort();
       break;
     case 4:
-
       startQuickSort();
-      cout << "quicksort completed" << endl;
       break;
     case 5:
       radixSort();
@@ -99,7 +96,7 @@ bool Algorithms::checkSort() {
     }
     blocks->mark(i);
     this_thread::sleep_for(
-        chrono::microseconds((int)(1000000 / blocks->nBlocks)));
+        chrono::microseconds((int)(100000 / blocks->nBlocks)));
   }
   blocks->mark(i);
   return true;
@@ -176,7 +173,7 @@ void Algorithms::startMergeSort() {
 }
 
 void Algorithms::shakerSort() {
-  for (int i = 0; i < blocks->nBlocks; ++i) {
+  for (int i = 0; i < blocks->nBlocks / 2; ++i) {
     // loop going forward for bigger number
     for (int j = i; j < blocks->nBlocks - 1 - i; ++j) {
       if (blocks->cmp(j, j + 1) == 1) {

@@ -19,9 +19,9 @@ int main() {
   int positionBlocksX = 0;
   int positionBlocksY = 20;
 
-  Blocks b(heightSort, widthSort, positionBlocksX, positionBlocksY);
-  Algorithms algo(&b);
-  Statusbar bar(&b, &algo, 20.0, widthSort);
+  Blocks blocks(heightSort, widthSort, positionBlocksX, positionBlocksY);
+  Algorithms algo(&blocks);
+  Statusbar bar(&blocks, &algo, 20.0, widthSort);
 
   window.setFramerateLimit(30);
 
@@ -33,7 +33,7 @@ int main() {
     while (window.pollEvent(event)) {
       // "close requested" event: we close the window
       // catch the resize events
-       if (event.type == sf::Event::Closed) {
+      if (event.type == sf::Event::Closed) {
         window.close();
       } else if (event.type == sf::Event::KeyPressed) {
         switch (event.key.code) {
@@ -76,12 +76,12 @@ int main() {
       }
     }
 
-    b.render();
+    blocks.render();
     bar.render();
     window.clear(sf::Color::Black);
 
-    window.draw(b);    // Draw the vertices
-    window.draw(bar);  // Draw the text
+    window.draw(blocks);  // Draw the vertices
+    window.draw(bar);     // Draw the text
 
     window.display();
   }
