@@ -31,12 +31,4 @@ target_link_libraries(main PRIVATE sfml-graphics)
 # Set C++ standard
 target_compile_features(main PRIVATE cxx_std_17)
 
-# Platform-specific configurations
-if(WIN32)
-    # Copy SFML DLLs to the output directory (Windows only)
-    add_custom_command(TARGET main POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_directory
-        $<TARGET_FILE_DIR:sfml-graphics>/../bin
-        $<TARGET_FILE_DIR:main>
-    )
-endif()
+

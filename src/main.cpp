@@ -1,4 +1,6 @@
+#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
 #include <atomic>
 #include <cstdlib>
 #include <iostream>
@@ -35,6 +37,11 @@ int main() {
       // catch the resize events
       if (event.type == sf::Event::Closed) {
         window.close();
+      } else if (event.type == sf::Event::Resized) {
+        sf::FloatRect visibleArea(0, 0, event.size.width, event.size.height);
+        window.setView(sf::View(visibleArea));
+        bar.height = event.size.width;
+        bar.width = event.size.height;
       } else if (event.type == sf::Event::KeyPressed) {
         switch (event.key.code) {
           case sf::Keyboard::Right:
