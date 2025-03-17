@@ -5,14 +5,15 @@ A C++ program that provides a visual representation of various sorting algorithm
 ## Features
 
 ### Implemented Sorting Algorithms
-- Bubble Sort
-- Merge Sort
-- Shaker Sort (Cocktail Sort)
-- Quick Sort
-- Radix Sort
-- Shell Sort
+- Bubble Sort (key 1)
+- Merge Sort  (key 2)
+- Shaker Sort (key 3)
+- Quick Sort (key 4)
+- Radix Sort (key 5)
+- Shell Sort (key 6)
 
 ### Visualization Controls
+- **S key**: Shuffle blocks 
 - **Up/Down Arrow Keys**: Control animation speed
 - **Left/Right Arrow Keys**: Adjust number of blocks (up to 100,000)
 - Real-time visualization of block swaps
@@ -21,7 +22,7 @@ A C++ program that provides a visual representation of various sorting algorithm
 
 ### Performance Optimizations
 - Utilizes vertex and vertexBuffer for efficient rendering
-- Supports up to 100,000 blocks with minimal CPU usage
+- Supports up to 1,000,000 blocks
 - Thread separation for algorithm execution and visualization
 
 ## Technical Implementation
