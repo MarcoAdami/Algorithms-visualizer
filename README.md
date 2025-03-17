@@ -15,7 +15,7 @@ A C++ program that provides a visual representation of various sorting algorithm
 ### Visualization Controls
 - **S key**: Shuffle blocks 
 - **Up/Down Arrow Keys**: Control animation speed
-- **Left/Right Arrow Keys**: Adjust number of blocks (up to 100,000)
+- **Left/Right Arrow Keys**: Adjust number of blocks (up to 1,000,000)
 - Real-time visualization of block swaps
 - Dedicated frames for blocks and algorithm description
 - Multi-threaded algorithm execution for smooth visualization
